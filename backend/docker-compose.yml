@@ -1,0 +1,11 @@
+services:
+  qos-backend:
+    build: .
+    container_name: network-qos-backend
+    ports:
+      - "3000:3000"
+      - "5050:5050"
+    environment:
+      - PORT=3000
+      - TCP_PORT=5050
+    restart: unless-stopped
